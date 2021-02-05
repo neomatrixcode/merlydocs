@@ -87,9 +87,35 @@ end)
 
 ## Route parameters
 
+Route parameters are dynamic elements in the route, which are named segments using the symbol: or without a name. They are placed in the name of the url and it is compatible with the previously mentioned methods of creating endpoints.
 
+The obtained values can be retrieved using the params dictionary stored in the request variable, with the path parameter name specified in the path.
 
+```julia
+@page "/hola/:usr" begin
+HTTP.Response(200,string("<b>Hello ",request.params["usr"],"!</b>"))
+end
 
+@route GET "/get/:data1" begin
+  HTTP.Response(200, string(u ,request.params["data1"]))
+end
+
+Get("/test1/:usr",
+  (request, HTTP) -> begin
+        HTTP.Response(200,string("<b>test1 ",request.params["usr"],"!</b>"))
+    end
+)
+```
+
+It is also possible to use a regular expression to specify the parameters in a custom way and it can be retrieved by the position of the parameter in the path.
+
+```julia
+@route GET "/regex/(\\w+\\d+)" begin
+  return HTTP.Response(200, string("datos ",request.params["2"]))
+end
+```
 
 ## Variables
+
+
 
