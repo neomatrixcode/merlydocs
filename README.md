@@ -5,15 +5,6 @@
 Becoming a super hero is a fairly straight forward process:
 
 ```julia
-               _
-   _       _ _(_)_     |  Documentation: https://docs.julialang.org
-  (_)     | (_) (_)    |
-   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
-  | | | | | | |/ _` |  |
-  | | |_| | | | (_| |  |  Version 1.5.3 (2020-11-09)
- _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
-|__/                   |
-
 (@v1.5) pkg> add Merly
 ```
 
