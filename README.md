@@ -3,7 +3,7 @@
 Merly is a **micro framework** for declaring routes and handling requests.                                                                       Quickly creating web applications in Julia with minimal effort.
 
 {% hint style="danger" %}
-These docs are for **Merly v1**
+These docs are for **Merly v1.0.0**
 {% endhint %}
 
 ## Installation
@@ -37,5 +37,5 @@ start(port= 8086)
 julia server.jl
 ```
 
-
+Browse to `http://127.0.0.1:8086,` and you should see `Hello, World!` on the page.
 
