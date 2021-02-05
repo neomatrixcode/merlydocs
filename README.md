@@ -1,100 +1,41 @@
 # Quick start
 
-## Getting Super Powers
+Merly is a **micro framework** for declaring routes and handling requests.                                                                       Quickly creating web applications in Julia with minimal effort.
 
-Becoming a super hero is a fairly straight forward process:
+{% hint style="danger" %}
+These docs are for **Merly v1**
+{% endhint %}
+
+## Installation
+
+First [download](https://julialang.org/downloads/#current_stable_release) and install Julia. `1.5` or higher.                                                                                                                        To do the installation use any of the following commands:
+
+```julia
+using Pkg
+Pkg.add("Merly")
+```
 
 ```julia
 (@v1.5) pkg> add Merly
 ```
 
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
+## Hello, World!
 
-Once you're strong enough, save the world:
+This is the simplest application you can do with Merly:
 
+{% code title="server.jl" %}
 ```julia
 using Merly
 
-u= 1
+@page "/" HTTP.Response(200,"Hello World!")
 
-useCORS()
-
-@page "/" "Hello World!"
-
-@page "/hola4/:usr" begin
-    string("<b>Hello4 !</b>")
-end
-
-@page "/hola3/:usr" (;u=u) begin
-    u = u +1
-    string("<b>Hello3 ",u," !</b>")
-end
-
-@route GET "/get/data" begin
-  "get this back: data"
-end
-
-@route GET "/get/u" (;u=u) begin
-  u= u+1
-  string("get this back:", u)
-end
-#bug [/get/data1 resuelve a la ruta /get/data]
-
-
-Get("/test1/:usr",
-	(request, response) -> begin
-        string("<b>test1 !</b>")
-    end
-)
-
-
-Get("/tes2/:usr",
-    (result(;u=u) = (request, response)-> begin
-    	    u= u+1
-            string("<b>test2 ",u," !</b>")
-        end)()
-)
-
-
-#middleware
-function authenticate(request, HTTP)
-
-  return request, HTTP, 300
-end
-
-
-@route GET "/verify" (;u=u) begin
-  u= u+1
-  return  HTTP.Response(200,string("<b>verify ", data, u ," !</b>"))
-end
-
-
-Get("/verify",
-
-	(result(;middleware=authenticate) = (request, HTTP)-> begin
-
-	    myfunction = (request, HTTP, data)-> begin
-	              return  HTTP.Response(200,string("<b>verify ", data ," !</b>"))
-	    end
-
-	    return myfunction(middleware(request,HTTP)...)
-
-	end)()
-
-)
-
-
-@async start()
-```
-
-{% code title="hello.sh" %}
-```julia
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+start(port= 8086)
 ```
 {% endcode %}
+
+```julia
+julia server.jl
+```
 
 
 
