@@ -37,5 +37,5 @@ start(port= 8086)
 julia server.jl
 ```
 
-Browse to `http://127.0.0.1:8086,` and you should see `Hello, World!` on the page.
+Browse to `http://127.0.0.1:8086` and you should see `Hello World!` on the page.
 
