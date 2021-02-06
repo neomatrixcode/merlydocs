@@ -1,3 +1,7 @@
+---
+description: La funcion de
+---
+
 # Start
 
 ## Getting Super Powers
@@ -10,12 +14,15 @@ start( host = "127.0.0.1", port = 8086, verbose = false)
 
 
 
-{% code title="hello.sh" %}
-```bash
-# Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+```text
+#!/bin/sh
+
+for i in $(seq 0 $(($(nproc --all)-1))); do
+	julia --threads auto server.jl &
+done
+
+while : ; do sleep 1 ; done
 ```
-{% endcode %}
 
 
 
