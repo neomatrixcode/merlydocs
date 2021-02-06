@@ -35,7 +35,7 @@ Get("/verify/:status",
       if (isAuthenticated == false )
           return  HTTP.Response(403,string("Unauthenticated. Please signup!"))
       end
-                return  HTTP.Response(200,string("<b>verify !</b>"))
+          return  HTTP.Response(200,string("<b>verify !</b>"))
       end
 
   return myfunction(middleware(request,HTTP)...)
