@@ -6,9 +6,9 @@
 
 * [Routing](guide/routing.md)
 * [Start](guide/start.md)
-* [Custom 404 Handler](guide/custom-404-handler.md)
 * [Headers](guide/headers.md)
 * [Statics files](guide/statics-files.md)
+* [Custom 404 Handler](guide/custom-404-handler.md)
 * [BodyParser](guide/bodyparser.md)
 * [Middleware](guide/middleware.md)
 
