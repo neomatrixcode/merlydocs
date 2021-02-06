@@ -10,13 +10,13 @@ Route paths, combined with a request method, define the endpoints at which reque
 
 The routes are created with the name of an http verb \(GET, POST, PUT, DELETE, etc.\), a string that establishes the path of the endpoint and a function, which receives a pair of parameters and returns an HTTP response structure.
 
-* request: Contains all the data sent by the client.                                                                                                                The query string, the body, the headers and the params.
+* **request**: Contains all the data sent by the client.                                                                                                                The query string, the body, the headers and the params.
 
 ```julia
 "/data?hola=1" #url query
 ```
 
-* HTTP: Create an http response. It will host the http code, the response body and the http headers.
+* **HTTP**: Create an http response. It will host the http code, the response body and the http headers.
 
 ```julia
 (request,HTTP)-> begin
