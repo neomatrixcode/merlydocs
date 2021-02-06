@@ -14,7 +14,6 @@ notfound("""<!DOCTYPE html>
               <head><title>Not found</title></head>
               <body><h1>404, Not found</h1></body>
               </html>""")
-notfound("website/notfound.html")
 ```
 
 It is also possible to pass a path that includes the name of the html file to use. The path will start from the directory where the program is located or from the path specified as a base.
