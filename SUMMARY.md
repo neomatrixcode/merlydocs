@@ -5,12 +5,12 @@
 ## Guide
 
 * [Routing](guide/routing.md)
-* [Custom 404 Handler](guide/custom-404-handler.md)
-* [Middleware](guide/middleware.md)
 * [Start](guide/start.md)
+* [Custom 404 Handler](guide/custom-404-handler.md)
 * [Headers](guide/headers.md)
 * [Statics files](guide/statics-files.md)
 * [BodyParser](guide/bodyparser.md)
+* [Middleware](guide/middleware.md)
 
 ---
 
