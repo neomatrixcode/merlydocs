@@ -148,7 +148,7 @@ Get("/test2/:usr",
 )
 ```
 
-if the variable is read-only, it is possible to use it in the simple function format just by invoking it; but if you want to modify it you should use the `global` reserved word, however it is not recommended due to loss of performance.
+if the variable is read-only, it is possible to use it in the simple function format just by invoking it; but if you want to modify it you should use the `global` reserved word. However, it is not recommended due to loss of performance.
 
 ```julia
 Get("/data", (request,HTTP)->begin
