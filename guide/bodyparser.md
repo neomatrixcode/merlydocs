@@ -4,7 +4,7 @@ description: >-
   previously.
 ---
 
-# BodyParser
+# Body parser
 
 ## formats
 

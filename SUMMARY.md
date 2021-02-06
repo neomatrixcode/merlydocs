@@ -9,7 +9,7 @@
 * [Headers](guide/headers.md)
 * [Statics files](guide/statics-files.md)
 * [Custom 404 Handler](guide/custom-404-handler.md)
-* [BodyParser](guide/bodyparser.md)
+* [Body parser](guide/bodyparser.md)
 * [Middleware](guide/middleware.md)
 
 ---
