@@ -3,7 +3,7 @@
 Merly is a **micro framework** for declaring routes and handling requests.                                                                       Quickly creating web applications in Julia with minimal effort.
 
 {% hint style="danger" %}
-These docs are for **Merly v1.0.0**
+These docs are for **Merly v1.0.x**
 {% endhint %}
 
 ## Installation
@@ -29,7 +29,7 @@ using Merly
 
 @page "/" HTTP.Response(200,"Hello World!")
 
-start(port= 8086)
+start(host = "127.0.0.1", port = 8086, verbose = true)
 ```
 {% endcode %}
 

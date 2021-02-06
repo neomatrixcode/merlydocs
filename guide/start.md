@@ -22,30 +22,21 @@ start( host = "127.0.0.1", port = 8086, verbose = false)
 
 
 
-By default, when executing the process, it will only use one processor core: if you want to use all the available cores on the machine, you can use a script that allows the process to run on all the available logical processors.
+By default, when executing the process, it will only use one processor core.
 
-{% code title="run.sh" %}
-```bash
-#!/bin/sh
+## TLS
 
-for i in $(seq 0 $(($(nproc --all)-1))); do
-	julia --threads auto server.jl &
-done
+To enable TLS / HTTPS the **sslconfig** parameter is used, which receives the https certificate files.
 
-while : ; do sleep 1 ; done
+{% hint style="info" %}
+If you want to generate HTTPS certificate for localhost domains, you can follow the following [tutorial](https://gist.github.com/cecilemuller/9492b848eb8fe46d462abeb26656c4f8).
+{% endhint %}
+
+```julia
+using MbedTLS
+
+start( sslconfig= MbedTLS.SSLConfig("localhost.crt", "localhost.key") )
 ```
-{% endcode %}
 
-In windows a similar script would be:
 
-```bash
-@echo off
-
-echo %NUMBER_OF_PROCESSORS%
-
-FOR /L %%G IN (1,1,12) DO start /B julia --threads auto myserver.jl
-
- timeout /t 60 /nobreak
-pause
-```
 
