@@ -4,7 +4,7 @@
 
 Becoming a super hero is a fairly straight forward process:
 
-```
+```julia
 function authenticate(request, HTTP)
   isAuthenticated = false
 
@@ -16,7 +16,7 @@ function authenticate(request, HTTP)
 end
 ```
 
-```bash
+```julia
 Get("/verify/:status",
 
   (result(;middleware=authenticate) = (request, HTTP)-> begin

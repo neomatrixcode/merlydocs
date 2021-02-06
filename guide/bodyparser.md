@@ -4,7 +4,7 @@
 
 Binds the request body to a struct. `BodyParser` supports decoding query parameters and the following content types based on the `Content-Type` header:
 
-```
+```julia
 function tojson(data::String)
    return JSON.parse(data)
 end
@@ -15,7 +15,7 @@ formats["application/json"] = tojson
 
 
 
-```text
+```julia
 Post("/data", (request,HTTP)-> begin
 
   HTTP.Response(200

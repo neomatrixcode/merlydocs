@@ -6,7 +6,7 @@
 
 
 
-```
+```julia
 useCORS()
 
 headersalways(["X-PINGOTHER" => "pingpong"])

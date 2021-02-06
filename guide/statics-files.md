@@ -8,7 +8,7 @@ description: 'webserverfiles allows serving static files like images, CSS, and J
 
 The webserverpath method allows to set a certain folder or path as the current or base directory.
 
-```
+```julia
  webserverpath("folder") 
 ```
 
@@ -20,7 +20,7 @@ The webserverfiles method allows you to indicate whether all the existing files 
 *  **`jl`**  : File extension that should not be exposed
 *  **`clj|jl|py`** : Extension in files that will not be exposed
 
-```bash
+```julia
 webserverfiles("*")
 ```
 
