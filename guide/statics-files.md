@@ -14,14 +14,21 @@ The webserverpath method allows to set a certain folder or path as the current o
 
 ## webserverfiles
 
-The webserverfiles method allows you to indicate whether all the existing files in the directory considered as base or current will be exposed, or otherwise specify which files should not be exposed, by means of their extension.
+The webserverfiles method allows you to indicate if all the existing files in the directory considered as base or current will be exposed, or specify which files will be exposed by means of their extension.
 
 * **`*`** : Exposes all files located in the path considered as base, except those that start with `.`
-*  **`jl`**  : File extension that should not be exposed
-*  **`clj|jl|py`** : Extension in files that will not be exposed
+*  **`css|js|html`** : Extension in files that will be exposed
 
 ```julia
 webserverfiles("*")
+```
+
+## File
+
+The File method allows to obtain the content of a file located in the base or current directory, receives a string with the name and extension of the file and returns a string with its content.
+
+```julia
+File("index.html")
 ```
 
 
