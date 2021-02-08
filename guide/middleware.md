@@ -7,8 +7,6 @@ description: >-
 
 # Middleware
 
-## Getting Super Powers
-
 It is possible to create a custom function that is executed before or after the function associated with an endpopint, the function will be created with the desired name and later it will be passed as a variable.
 
 ```julia
