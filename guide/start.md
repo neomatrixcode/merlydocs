@@ -22,7 +22,7 @@ start( host = "127.0.0.1", port = 8086, verbose = false)
 
 
 
-By default, when executing the process, it will only use one processor core.
+By default, when executing the process, it will only use one processor core. If you want to improve performance you can use a load balancer like NGINX, here you can find an [example](https://github.com/neomatrixcode/merly-nginx-loadbalancer).
 
 ## TLS
 
