@@ -16,4 +16,5 @@
 
 * [Website](https://merly.vercel.app/)
 * [Code](https://github.com/neomatrixcode/Merly.jl)
+* [Examples](https://merly.vercel.app/#examples)
 
