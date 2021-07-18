@@ -7,6 +7,7 @@
 * [Routing](guide/routing.md)
 * [Start](guide/start.md)
 * [Headers](guide/headers.md)
+* [CORS](guide/cors.md)
 * [Statics files](guide/statics-files.md)
 * [Custom 404 Handler](guide/custom-404-handler.md)
 * [Body parser](guide/bodyparser.md)
