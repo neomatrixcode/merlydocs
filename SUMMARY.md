@@ -8,6 +8,7 @@
 * [Start](guide/start.md)
 * [Headers](guide/headers.md)
 * [CORS](guide/cors.md)
+* [Http methods available](guide/http-methods-available.md)
 * [Statics files](guide/statics-files.md)
 * [Custom 404 Handler](guide/custom-404-handler.md)
 * [Body parser](guide/bodyparser.md)
